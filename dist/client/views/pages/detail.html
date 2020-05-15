@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <p><button type="button" class="btn btn-success" id="edit" >编辑</button><button type="button" class="btn btn-danger"
+        id="delete" data-id='{{data.id}}'>删除</button></p>
+    <table class="table">
+      <tr>
+        <td>{{data.id}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.author}}</td>
+        <td>{{data.isbn}}</td>
+        <td>{{data.price}}</td>
+        <td>{{data.memo}}</td>
+        <td>{{data.create_date}}</td>
+      </tr>
+    </table>
+
+  </div>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  {% block scripts %}
+  <script src="../../script/runtime.bundle.js"></script><script src="../../script/detail.bundle.js"></script>
+  {% endblock %}
+</body>
+
+</html>
