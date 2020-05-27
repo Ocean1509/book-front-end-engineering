@@ -16,6 +16,9 @@ var _require = require('../config'),
     host = _require.host,
     api = _require.api;
 
+var _require2 = require('stream'),
+    Readable = _require2.Readable;
+
 var Books = /*#__PURE__*/function () {
   function Books() {
     (0, _classCallCheck2["default"])(this, Books);
@@ -27,29 +30,43 @@ var Books = /*#__PURE__*/function () {
     key: "getLists",
     value: function () {
       var _getLists = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(ctx, next) {
-        var res, ids, datas;
+        var res, ids, datas, html, createReadStream;
         return _regenerator["default"].wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
+                createReadStream = function _createReadStream() {
+                  return new Promise(function (resolve, reject) {
+                    var htmlStr = new Readable();
+                    htmlStr.push(html);
+                    htmlStr.push(null);
+                    ctx.status = 200;
+                    ctx.type = "html";
+                    htmlStr.on('error', function (err) {
+                      return reject(err);
+                    }).pipe(ctx.res);
+                  });
+                };
+
+                _context.next = 3;
                 return axios.get(this.url);
 
-              case 2:
+              case 3:
                 res = _context.sent;
                 ids = Object.keys(res.data[0]);
                 datas = {
                   lists: res.data,
                   titles: ids
-                }; // console.log(datas)
-
-                _context.next = 7;
+                };
+                _context.next = 8;
                 return ctx.render('index', datas);
 
-              case 7:
-                ctx.body = _context.sent;
-
               case 8:
+                html = _context.sent;
+                _context.next = 11;
+                return createReadStream();
+
+              case 11:
               case "end":
                 return _context.stop();
             }
@@ -74,31 +91,41 @@ var Books = /*#__PURE__*/function () {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
+                if (!ctx.request.header['x-pjax']) {
+                  _context2.next = 2;
+                  break;
+                }
+
+                return _context2.abrupt("return", ctx.body = {
+                  data: '12321'
+                });
+
+              case 2:
                 id = ctx.params && ctx.params.id;
                 res = {};
 
                 if (!id) {
-                  _context2.next = 9;
+                  _context2.next = 11;
                   break;
                 }
 
-                _context2.next = 5;
+                _context2.next = 7;
                 return axios.get("".concat(this.url, "/").concat(id));
 
-              case 5:
+              case 7:
                 _yield$axios$get = _context2.sent;
                 data = _yield$axios$get.data;
                 res.data = data;
                 res.method = "put";
 
-              case 9:
-                _context2.next = 11;
+              case 11:
+                _context2.next = 13;
                 return ctx.render('create', res);
 
-              case 11:
+              case 13:
                 ctx.body = _context2.sent;
 
-              case 12:
+              case 14:
               case "end":
                 return _context2.stop();
             }

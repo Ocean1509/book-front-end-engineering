@@ -3,7 +3,7 @@ const {
   host,
   api
 } = require('../src/server/config');
-
+const { Readable } = require('stream')
 
 class Books {
   constructor() {
@@ -17,8 +17,17 @@ class Books {
       lists: res.data,
       titles: ids
     }
-    // console.log(datas)
-    ctx.body = await ctx.render('index', datas);
+    const html = ctx.render('create', res);
+    function createReadStream(ctx) {
+      return new Promise((resolve, reject) => {
+        const htmlStr = new Readable()
+        htmlStr.push(html)
+        htmlStr.push(null)
+        htmlStr.on('error', (err) => reject(err)).pipe(ctx.res)
+      })
+    }
+    ctx.body = await createReadStream(ctx)
+    // ctx.body = await ctx.render('index', datas);
   }
 
   // 新建/编辑页

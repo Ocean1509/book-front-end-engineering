@@ -3,6 +3,7 @@ const {
   host,
   api
 } = require('../config');
+const { Readable } = require('stream')
 
 
 class Books {
@@ -17,12 +18,28 @@ class Books {
       lists: res.data,
       titles: ids
     }
-    // console.log(datas)
-    ctx.body = await ctx.render('index', datas);
+    const html = await ctx.render('index', datas);
+    function createReadStream() {
+      return new Promise((resolve, reject) => {
+        const htmlStr = new Readable()
+        htmlStr.push(html)
+        htmlStr.push(null)
+        ctx.status = 200;
+        ctx.type = "html"
+
+        htmlStr.on('error', (err) => reject(err)).pipe(ctx.res)
+      })
+    }
+    await createReadStream()
   }
 
   // 新建/编辑页
   async create(ctx, next) {
+    if(ctx.request.header['x-pjax']) {
+      return  ctx.body = {
+        data: '12321'
+      }
+    }
     let id = ctx.params && ctx.params.id;
     let res = {}
     if (id) {
@@ -67,8 +84,8 @@ class Books {
   //       "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
   //     }
   //   })
-    // console.log(data)
-    // ctx.response.body = data.data
+  // console.log(data)
+  // ctx.response.body = data.data
   // }
 }
 

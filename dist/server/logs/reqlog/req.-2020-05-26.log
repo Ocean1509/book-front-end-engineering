@@ -1,0 +1,136 @@
+[2020-05-26T22:16:33.782] [INFO] default - 请求url /list
+[2020-05-26T22:16:34.130] [DEBUG] default - TypeError [ERR_INVALID_ARG_TYPE]: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of Promise
+    at chunkInvalid (_stream_readable.js:314:12)
+    at readableAddChunk (_stream_readable.js:246:12)
+    at Readable.push (_stream_readable.js:209:10)
+    at C:\Users\wyp\Desktop\books\dist\server\controllers\index.js:41:29
+    at new Promise (<anonymous>)
+    at _createReadStream (C:\Users\wyp\Desktop\books\dist\server\controllers\index.js:39:26)
+    at Books._callee$ (C:\Users\wyp\Desktop\books\dist\server\controllers\index.js:61:24)
+    at tryCatch (C:\Users\wyp\Desktop\books\node_modules\_regenerator-runtime@0.13.5@regenerator-runtime\runtime.js:45:40)
+    at Generator.invoke [as _invoke] (C:\Users\wyp\Desktop\books\node_modules\_regenerator-runtime@0.13.5@regenerator-runtime\runtime.js:274:22)
+    at Generator.prototype.<computed> [as next] (C:\Users\wyp\Desktop\books\node_modules\_regenerator-runtime@0.13.5@regenerator-runtime\runtime.js:97:21) {
+  code: 'ERR_INVALID_ARG_TYPE'
+}
+[2020-05-26T22:16:34.134] [DEBUG] default - 500
+[2020-05-26T22:17:37.020] [INFO] default - 请求url /list
+[2020-05-26T22:17:37.192] [DEBUG] default - TypeError [ERR_INVALID_ARG_TYPE]: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of Promise
+    at chunkInvalid (_stream_readable.js:314:12)
+    at readableAddChunk (_stream_readable.js:246:12)
+    at Readable.push (_stream_readable.js:209:10)
+    at C:\Users\wyp\Desktop\books\dist\server\controllers\index.js:41:29
+    at new Promise (<anonymous>)
+    at _createReadStream (C:\Users\wyp\Desktop\books\dist\server\controllers\index.js:39:26)
+    at Books._callee$ (C:\Users\wyp\Desktop\books\dist\server\controllers\index.js:61:24)
+    at tryCatch (C:\Users\wyp\Desktop\books\node_modules\_regenerator-runtime@0.13.5@regenerator-runtime\runtime.js:45:40)
+    at Generator.invoke [as _invoke] (C:\Users\wyp\Desktop\books\node_modules\_regenerator-runtime@0.13.5@regenerator-runtime\runtime.js:274:22)
+    at Generator.prototype.<computed> [as next] (C:\Users\wyp\Desktop\books\node_modules\_regenerator-runtime@0.13.5@regenerator-runtime\runtime.js:97:21) {
+  code: 'ERR_INVALID_ARG_TYPE'
+}
+[2020-05-26T22:17:37.194] [DEBUG] default - 500
+[2020-05-26T22:18:50.194] [INFO] default - 请求url /list
+[2020-05-26T22:18:50.393] [DEBUG] default - TypeError [ERR_INVALID_ARG_TYPE]: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of Promise
+    at chunkInvalid (_stream_readable.js:314:12)
+    at readableAddChunk (_stream_readable.js:246:12)
+    at Readable.push (_stream_readable.js:209:10)
+    at C:\Users\wyp\Desktop\books\dist\server\controllers\index.js:41:29
+    at new Promise (<anonymous>)
+    at _createReadStream (C:\Users\wyp\Desktop\books\dist\server\controllers\index.js:39:26)
+    at Books._callee$ (C:\Users\wyp\Desktop\books\dist\server\controllers\index.js:63:24)
+    at tryCatch (C:\Users\wyp\Desktop\books\node_modules\_regenerator-runtime@0.13.5@regenerator-runtime\runtime.js:45:40)
+    at Generator.invoke [as _invoke] (C:\Users\wyp\Desktop\books\node_modules\_regenerator-runtime@0.13.5@regenerator-runtime\runtime.js:274:22)
+    at Generator.prototype.<computed> [as next] (C:\Users\wyp\Desktop\books\node_modules\_regenerator-runtime@0.13.5@regenerator-runtime\runtime.js:97:21) {
+  code: 'ERR_INVALID_ARG_TYPE'
+}
+[2020-05-26T22:18:50.395] [DEBUG] default - 500
+[2020-05-26T22:19:46.447] [INFO] default - 请求url /list
+[2020-05-26T22:19:51.305] [INFO] default - 请求url /list
+[2020-05-26T22:20:35.288] [INFO] default - 请求url /list
+[2020-05-26T22:20:35.455] [DEBUG] default - [Error: ENOENT: no such file or directory, open 'C:\Users\wyp\Desktop\books\dist\client\views\pages\list.html'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\wyp\\Desktop\\books\\dist\\client\\views\\pages\\list.html'
+}
+[2020-05-26T22:20:35.457] [DEBUG] default - 500
+[2020-05-26T22:21:07.417] [INFO] default - 请求url /list
+[2020-05-26T22:21:07.589] [DEBUG] default - [Error: ENOENT: no such file or directory, open 'C:\.html'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\.html'
+}
+[2020-05-26T22:21:07.591] [DEBUG] default - 500
+[2020-05-26T22:21:36.485] [INFO] default - 请求url /list
+[2020-05-26T22:21:36.664] [DEBUG] default - [Error: ENOENT: no such file or directory, open 'C:\lists.html'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\lists.html'
+}
+[2020-05-26T22:21:36.665] [DEBUG] default - 500
+[2020-05-26T22:21:37.927] [INFO] default - 请求url /list
+[2020-05-26T22:21:38.043] [DEBUG] default - [Error: ENOENT: no such file or directory, open 'C:\lists.html'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\lists.html'
+}
+[2020-05-26T22:21:38.045] [DEBUG] default - 500
+[2020-05-26T22:22:02.018] [INFO] default - 请求url /list
+[2020-05-26T22:22:02.161] [DEBUG] default - [Error: ENOENT: no such file or directory, open 'C:\Users\wyp\Desktop\books\dist\client\views\pages\lists.html'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\wyp\\Desktop\\books\\dist\\client\\views\\pages\\lists.html'
+}
+[2020-05-26T22:22:02.163] [DEBUG] default - 500
+[2020-05-26T22:22:03.210] [INFO] default - 请求url /list
+[2020-05-26T22:22:03.342] [DEBUG] default - [Error: ENOENT: no such file or directory, open 'C:\Users\wyp\Desktop\books\dist\client\views\pages\lists.html'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\wyp\\Desktop\\books\\dist\\client\\views\\pages\\lists.html'
+}
+[2020-05-26T22:22:03.344] [DEBUG] default - 500
+[2020-05-26T22:22:03.750] [INFO] default - 请求url /list
+[2020-05-26T22:22:03.892] [DEBUG] default - [Error: ENOENT: no such file or directory, open 'C:\Users\wyp\Desktop\books\dist\client\views\pages\lists.html'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\wyp\\Desktop\\books\\dist\\client\\views\\pages\\lists.html'
+}
+[2020-05-26T22:22:03.894] [DEBUG] default - 500
+[2020-05-26T22:22:04.107] [INFO] default - 请求url /list
+[2020-05-26T22:22:04.238] [DEBUG] default - [Error: ENOENT: no such file or directory, open 'C:\Users\wyp\Desktop\books\dist\client\views\pages\lists.html'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\wyp\\Desktop\\books\\dist\\client\\views\\pages\\lists.html'
+}
+[2020-05-26T22:22:04.240] [DEBUG] default - 500
+[2020-05-26T22:22:35.223] [INFO] default - 请求url /list
+[2020-05-26T22:23:13.007] [INFO] default - 请求url /list
+[2020-05-26T22:23:23.966] [INFO] default - 请求url /list
+[2020-05-26T22:23:24.272] [INFO] default - 请求url /favicon.ico
+[2020-05-26T22:23:24.282] [DEBUG] default - 404
+[2020-05-26T22:25:28.633] [INFO] default - 请求url /list
+[2020-05-26T22:25:29.164] [INFO] default - 请求url /list
+[2020-05-26T22:25:29.315] [INFO] default - 请求url /list
+[2020-05-26T22:25:29.325] [INFO] default - 请求url /list
+[2020-05-26T22:25:29.377] [INFO] default - 请求url /list
+[2020-05-26T22:25:29.427] [INFO] default - 请求url /list
+[2020-05-26T22:25:34.299] [INFO] default - 请求url /list
+[2020-05-26T22:49:39.947] [INFO] default - 请求url /list
+[2020-05-26T22:51:03.863] [INFO] default - 请求url /list
+[2020-05-26T22:51:09.315] [INFO] default - 请求url /create?_pjax=.container
+[2020-05-26T22:51:09.379] [INFO] default - 请求url /create
+[2020-05-26T22:53:03.341] [INFO] default - 请求url /
+[2020-05-26T22:53:03.353] [DEBUG] default - 404
+[2020-05-26T22:53:07.897] [INFO] default - 请求url /list
+[2020-05-26T22:53:12.626] [INFO] default - 请求url /create?_pjax=.container
+[2020-05-26T22:53:12.656] [INFO] default - 请求url /create
+[2020-05-26T22:54:37.418] [INFO] default - 请求url /list
+[2020-05-26T22:54:38.579] [INFO] default - 请求url /list
+[2020-05-26T22:54:41.328] [INFO] default - 请求url /list
+[2020-05-26T22:54:43.657] [INFO] default - 请求url /create?_pjax=.container

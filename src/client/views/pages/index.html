@@ -11,7 +11,7 @@
 
 <body>
   <div class="container">
-    <p><button type="button" class="btn btn-success" id="create">新建</button></p>
+    <p><button type="button" class="btn btn-success" id="create"><a href="/create">新建</a></button></p>
     <table class="table">
       <tr>
         {% for t in titles %}
@@ -35,26 +35,14 @@
     </table>
 
   </div>
-  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/bluebird/3.7.2/bluebird.core.min.js" nomodule></script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/systemjs/6.3.1/s.js" nomodule></script> -->
-  <!-- <script nomodule >
-    System.import("./index-bundle.js").then(function(a) {
-      console.log(a)
-    })
-  </script>
-  <script type="module">
-    import("./index.js").then(({ a }) => {
-      console.log(a)
-    })
-
-
-  </script> -->
-  <!-- <script>
+  <script src="https://cdn.bootcss.com/jquery/3.5.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.js"></script>
+  <script>
+    $(document).pjax("a", ".container")
     $(document).ready(function () {
-      $('#create').click(function () {
-        location.href = '/create'
-      })
+    //   $('#create').click(function () {
+    //     location.href = '/create'
+    //   })
       $('.edit').click(function () {
         let id = $(this).attr('data-id')
         location.href = `/create/${id}`
@@ -79,10 +67,7 @@
         })
       })
     })
-  </script> -->
-  {% block scripts %}
-  <!-- injectjs -->
-  {% endblock %}
+  </script>
 </body>
 
 </html>
